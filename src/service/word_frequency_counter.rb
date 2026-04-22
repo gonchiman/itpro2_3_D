@@ -2,6 +2,8 @@ class WordFrequencyCounter
     # @param [Hash]
     # @return [Hash{String => Integer}]
     def self.count_word_frequency(text_file)
+        return {} if text_file.nil?
+
         text = _read_file(text_file)
         split_words = text.split(/[^A-Za-z]+/).reject(&:empty?)
         return _get_word_freqs(split_words)
@@ -26,5 +28,7 @@ class WordFrequencyCounter
                 word_freqs[word] = 1
             end
         end
+
+        word_freqs
     end
 end
