@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Frequency Count Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Word Frequency Count Page</h1>
+    <form action="/word_frequency_counter" method="post" enctype="multipart/form-data">
+        <p>Input Text File</p>
+        <input type="file" name="text_file" accept=".txt">
+        <select id="sort_type">
+            <option value="alphabet_asc">Alphabetical order (A to Z)</option>
+            <option value="alphabet_desc">Alphabetical order (Z to A)</option>
+            <option value="frequency_asc">Frequency order (low to high)</option>
+            <option value="frequency_desc">Frequency order (high to low)</option>
+        </select>
+
+        <button type="submit">Count Word Frequency</button>
+    </form>
+    <table>
+        <tr>
+            <th>Word</th>
+            <th>Frequency</th>
+        </tr>
+        <% if @word_freqs %>
+            <% @word_freqs.each do |word, freq| %>
+                <tr>
+                    <td><%= word %></td>
+                    <td><%= freq %></td>
+                </tr>
+            <% end %>
+        <% end %>
+    </table>
+</body>
+</html>
