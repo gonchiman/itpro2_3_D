@@ -8,16 +8,16 @@
 <body>
     <h1>Word Frequency Count Page</h1>
     <form action="/word_frequency_counter" method="post" enctype="multipart/form-data">
-        <p>Input Text File</p>
+        <p>Input text file and sort type</p>
         <input type="file" name="text_file" accept=".txt">
-        <select id="sort_type" name="sort_type" onchange="this.form.summit()">
+        <select id="sort_type" name="sort_type">
             <option value="alphabet_asc">Alphabetical order (A to Z)</option>
             <option value="alphabet_desc">Alphabetical order (Z to A)</option>
             <option value="frequency_asc">Frequency order (low to high)</option>
             <option value="frequency_desc">Frequency order (high to low)</option>
         </select>
 
-        <button type="submit">Count Word Frequency</button>
+        <button type="submit">Confirm</button>
     </form>
     <table>
         <tr>

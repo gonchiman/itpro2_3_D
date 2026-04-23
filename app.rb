@@ -8,6 +8,7 @@ set :public_folder, File.join(__dir__, "src", "public")
 
 get "/" do
     @word_freqs = {}
+    @sort_type = SortType::ALPHABET_ASC
     erb :word_frequency_count_page
 end
 
