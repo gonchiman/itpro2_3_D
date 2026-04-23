@@ -21,3 +21,14 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+fieldset legend {
+    font-weight: bold;
+}
