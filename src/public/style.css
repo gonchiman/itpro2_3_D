@@ -32,3 +32,9 @@ fieldset {
 fieldset legend {
     font-weight: bold;
 }
+
+.table-wrap {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}

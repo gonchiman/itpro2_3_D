@@ -29,19 +29,46 @@
             </div>
         </fieldset>
     </form>
-    <table>
-        <tr>
-            <th>Word</th>
-            <th>Frequency</th>
-        </tr>
-        <% if @word_freqs %>
-            <% @word_freqs.each do |word, freq| %>
+
+    <div class="table-wrap">
+
+        <div>
+            <h2>Frequency of Each Words</h2>
+
+            <table>
                 <tr>
-                    <td><%= word %></td>
-                    <td><%= freq %></td>
+                    <th>Word</th>
+                    <th>Frequency</th>
                 </tr>
-            <% end %>
-        <% end %>
-    </table>
+                <% if @word_freqs %>
+                    <% @word_freqs.each do |word, freq| %>
+                        <tr>
+                            <td><%= word %></td>
+                            <td><%= freq %></td>
+                        </tr>
+                    <% end %>
+                <% end %>
+            </table>
+        </div>
+
+        <div>
+            <h2>Frequency Distribution</h2>
+
+            <table>
+                <tr>
+                    <th>Frequency</th>
+                    <th>Number of Words</th>
+                </tr>
+                <% if @frequency_distribution %>
+                    <% @frequency_distribution.each do |freq, count| %>
+                        <tr>
+                            <td><%= freq %></td>
+                            <td><%= count %></td>
+                        </tr>
+                    <% end %>
+                <% end %>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
