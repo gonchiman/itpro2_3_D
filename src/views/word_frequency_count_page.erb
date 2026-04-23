@@ -10,7 +10,7 @@
     <form action="/word_frequency_counter" method="post" enctype="multipart/form-data">
         <p>Input Text File</p>
         <input type="file" name="text_file" accept=".txt">
-        <select id="sort_type">
+        <select id="sort_type" name="sort_type" onchange="this.form.summit()">
             <option value="alphabet_asc">Alphabetical order (A to Z)</option>
             <option value="alphabet_desc">Alphabetical order (Z to A)</option>
             <option value="frequency_asc">Frequency order (low to high)</option>
